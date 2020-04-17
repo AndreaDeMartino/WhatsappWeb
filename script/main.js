@@ -2,24 +2,24 @@
 $(document).ready(function () {
   
   // General Variables
-  var inputBox = $('.input-chat__search');
+
 
 
   // Add element with button
-  // $('.app').on('click', '.inputBox', function(){
-  //   console.log('ciao');
+  $('.app').on('click', '.chat-send', function(){
+    console.log('ciao');
     
-  //   addElement();
-  // })
+    addElement();
+  })
 
   // Add element with keyboard
-  $('.app').on('keyup', '.add-item', function(e){
+  // $('.app').on('keyup', '.add-item', function(e){
     
-    if (e.which == 13){
-      console.log('Premuto Invio su Input');
-      addElement();
-    }
-  })
+  //   if (e.which == 13){
+  //     console.log('Premuto Invio su Input');
+  //     addElement();
+  //   }
+  // })
 
   
   // Add Element Function
