@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- FONTAWESOME -->
-  <script src="https://kit.fontawesome.com/c2709405dd.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
   <link rel="stylesheet" href="css/shared.css">
   <link rel="stylesheet" href="css/main.css">
   <title>TITLE</title>
@@ -186,7 +186,34 @@
       </header>
 
       <main class="chat-main">
+        <div class="chat-main__wrapper">
 
+          <div class="message-row send-message">
+            <div class="message">
+              <h3>Ciao come stai?</h3>
+              <h5 class="message-time">06:20</h5>
+            </div>
+          </div>
+          
+          <div class="message-row received-message">
+            <div class="message">
+              <h3>Ciao come stai?</h3>
+              <h5 class="message-time">06:20</h5>
+            </div>
+          </div>
+
+          <!-- Template -->
+          <div class="template">
+            <div class="message-row">
+              <div class="message">
+                <h3></h3>
+                <h5 class="message-time">06:20</h5>
+              </div>
+            </div>
+          </div>
+          
+
+        </div>
       </main>
 
       <footer class="chat-footer">
@@ -198,9 +225,9 @@
           <input class="input-chat__search" type="text" placeholder="Scrivi un messaggio">
         </div>
 
-        <div class="chat-send">
+        <a class="chat-send">
           <i class="fas fa-microphone"></i>
-        </div>
+        </a>
       </footer>
     </main>
 

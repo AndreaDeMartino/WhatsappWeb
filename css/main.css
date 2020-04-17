@@ -76,9 +76,9 @@ header h5{
 }
 
 .sidebar-main{
+  height: calc(100% - 70px);
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
   background: #fff;
 }
 
@@ -140,7 +140,7 @@ header h5{
 .search-wrapper{
   width: 100%;
   display: flex;
-  margin: 0 10px;
+  margin: 5px 10px 5px 10px;
   background: #fff;
   border: 1px solid #f5f5f5;
 }
@@ -168,6 +168,7 @@ header h5{
 
 .sidebar-users{
   flex-grow: 1;
+  overflow-y: scroll;
   background: #fff;
 }
 
@@ -219,6 +220,7 @@ header h5{
 
 .chat{
   flex-grow: 1;
+  min-width: 800px;
   display: flex;
   flex-direction: column;
   background: #666;
@@ -242,6 +244,67 @@ header h5{
   flex-grow: 1;
   background-image: url('../img/mine.jpg');
 }
+
+.chat-main__wrapper{
+  height: 100%;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.message-row{
+  height: 50px;
+  margin: 15px 0;
+  display: flex;
+}
+
+.send-message{
+  justify-content: flex-end;
+}
+
+.received-message{
+  justify-content: flex-start;
+}
+
+.send-message .message{
+  background: #dcf8c0;
+}
+
+.received-message .message{
+  background: #fff;
+}
+
+.message-row h3{
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.message-row h5{
+  font-size: 10px;
+  font-weight: 400;
+}
+
+.message{
+  min-width: 150px;
+  height: 100%;
+  position: relative;
+  align-items: center;
+  margin: 10px 0;
+  padding: 10px 50px 10px 15px;
+  border-radius: 10px;
+}
+
+.message-time{
+  position: absolute;
+  bottom: 8%;
+  left: 78%;
+  color: #b7b9bb;
+}
+
+.template{
+  display: none;
+}
+
 
 .chat-footer{
   height: 70px;
@@ -277,4 +340,8 @@ header h5{
 .chat-send{
   width: 10%;
   text-align: center;
+}
+
+.chat-send:hover i:before{
+  content: "\f1d8"
 }
