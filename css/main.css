@@ -341,7 +341,3 @@ header h5{
   width: 10%;
   text-align: center;
 }
-
-.chat-send:hover i:before{
-  content: "\f1d8"
-}

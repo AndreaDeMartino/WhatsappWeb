@@ -1,8 +1,13 @@
 
 $(document).ready(function () {
   
-  // General Variables
 
+  // Change Icon on input focus
+  $('.input-chat__search').focus(function(){
+    $('.chat-send i').removeClass('fa-microphone').addClass('fa-paper-plane')
+  })
+  
+  
   // Add message with button
   $('.app').on('click', '.chat-send', function(){
     console.log('ciao');
