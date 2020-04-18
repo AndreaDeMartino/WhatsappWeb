@@ -24,6 +24,12 @@ $(document).ready(function () {
     }
   })
 
+  // Select User to chat
+  $('.user-box').click(function(){
+    $('.user-box').removeClass('user-active');
+    $(this).addClass('user-active');
+  })
+ 
   
   // Add message Function
   function addElement() {
@@ -31,8 +37,7 @@ $(document).ready(function () {
     var messageRow = $('.template .message-row').clone();
     messageRow.addClass('send-message');
     // Prendo valore da inputbox
-    messageText = $('.input-chat__search').val().trim();
-    console.log('Valore Input Box Prelevato:', messageText);
+    var messageText = $('.input-chat__search').val();
 
     if (messageText == '') {
       alert('Attenzione, non hai inserito un testo valido')

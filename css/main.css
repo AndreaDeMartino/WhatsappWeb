@@ -16,6 +16,10 @@ body{
   );
 }
 
+i{
+  cursor: pointer;
+}
+
 /* Utility */
 
 /* Sidebar Style */
@@ -85,6 +89,13 @@ header h5{
 .sidebar-users .user-box{
   display: flex;
   align-items: center;
+  cursor: pointer;
+  filter: grayscale(1);
+  transition: filter 0.3s;
+}
+
+.user-box:hover{
+  filter: grayscale(0);
 }
 
 .sidebar-notify{
@@ -184,8 +195,9 @@ header h5{
   border-bottom: none;
 }
 
-.user-active{
+.sidebar-users .user-box.user-active{
   background: #eaebeb;
+  filter: none;
 }
 
 .user-box__info{
