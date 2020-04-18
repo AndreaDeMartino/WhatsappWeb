@@ -168,7 +168,7 @@ header h5{
 
 .sidebar-users{
   flex-grow: 1;
-  overflow-y: scroll;
+  overflow-y: auto;
   background: #fff;
 }
 
@@ -241,19 +241,19 @@ header h5{
 }
 
 .chat-main{
-  flex-grow: 1;
+  height: calc(100% - 140px);
   background-image: url('../img/mine.jpg');
+  overflow-Y: auto;
 }
 
 .chat-main__wrapper{
-  height: 100%;
   width: 90%;
   margin: 0 auto;
-  margin-top: 50px;
+
 }
 
 .message-row{
-  height: 50px;
+  min-height: 50px;
   margin: 15px 0;
   display: flex;
 }
@@ -285,8 +285,8 @@ header h5{
 }
 
 .message{
-  min-width: 150px;
-  height: 100%;
+  width: 150px;
+  overflow-wrap: break-word;
   position: relative;
   align-items: center;
   margin: 10px 0;
