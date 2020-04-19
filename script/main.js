@@ -6,7 +6,12 @@ $(document).ready(function () {
   $('.input-chat__search').focus(function(){
     $('.chat-send i').removeClass('fa-microphone').addClass('fa-paper-plane')
   })
-  
+
+  // Restore Icon on blur
+  $('.input-chat__search').blur(function(){
+    $('.chat-send i').removeClass('fa-paper-plane').addClass('fa-microphone')
+  })
+
   
   // Add message with button
   $('.app').on('click', '.chat-send', function(){
@@ -21,6 +26,7 @@ $(document).ready(function () {
     if (e.which == 13){
       console.log('Premuto Invio su Input');
       addElement();
+
     }
   })
 
