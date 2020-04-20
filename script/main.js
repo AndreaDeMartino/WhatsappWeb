@@ -3,12 +3,12 @@ $(document).ready(function () {
   
 
   // Change Icon on input focus
-  $('.input-chat__search').focus(function(){
+  $('#input-chat__write').focus(function(){
     $('.chat-send i').removeClass('fa-microphone').addClass('fa-paper-plane')
   })
 
   // Restore Icon on blur
-  $('.input-chat__search').blur(function(){
+  $('#input-chat__write').blur(function(){
     $('.chat-send i').removeClass('fa-paper-plane').addClass('fa-microphone')
   })
 
@@ -21,7 +21,7 @@ $(document).ready(function () {
   })
 
   // Add message with keyboard
-  $('.app').on('keyup', '.input-chat__search', function(e){
+  $('.app').on('keyup', '#input-chat__write', function(e){
     
     if (e.which == 13){
       console.log('Premuto Invio su Input');
@@ -43,7 +43,7 @@ $(document).ready(function () {
     var messageRow = $('.template .message-row').clone();
     messageRow.addClass('send-message');
     // Prendo valore da inputbox
-    var messageText = $('.input-chat__search').val();
+    var messageText = $('#input-chat__write').val();
 
     if (messageText == '') {
       alert('Attenzione, non hai inserito un testo valido')
@@ -53,7 +53,7 @@ $(document).ready(function () {
       // Inserisco il tutto
       $('.chat-main__wrapper').append(messageRow);
       // Svuoto InputBox
-      $('.input-chat__search').val('');
+      $('#input-chat__write').val('');
     }
   }
 

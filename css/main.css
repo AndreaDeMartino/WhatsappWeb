@@ -168,7 +168,7 @@ header h5{
   color: #b7b9bb;
 }
 
-.input-search{
+#input-search{
   width: 100%;
   font-family: 'Lato', sans-serif;
   font-size: 10px;
@@ -335,11 +335,11 @@ header h5{
   width: 10%;
   text-align: center;
 }
-.chat-search{
+.chat-write{
   width: 80%;
 }
 
-.input-chat__search{
+#input-chat__write{
   width: 100%;
   border: 0;
   border-radius: 5px;

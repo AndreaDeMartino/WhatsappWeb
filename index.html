@@ -44,10 +44,10 @@
 
         <div class="sidebar-search">
           <div class="search-wrapper">
-            <div class="search-button">
+            <label for="input-search" class="search-button">
               <i class="fas fa-search"></i>
-            </div>
-            <input class="input-search" type="text" placeholder="Cerca o inzia una nuova chat">
+            </label>
+            <input id="input-search" type="text" placeholder="Cerca o inzia una nuova chat">
           </div>
           
         </div>
@@ -211,23 +211,26 @@
               </div>
             </div>
           </div>
-          
 
         </div>
       </main>
 
       <footer class="chat-footer">
+        
         <div class="chat-emoticon">
           <i class="far fa-smile"></i>
         </div>
 
-        <div class="chat-search">
-          <input class="input-chat__search" type="text" placeholder="Scrivi un messaggio">
+        <div class="chat-write">
+          <input id="input-chat__write" type="text" placeholder="Scrivi un messaggio">    
         </div>
 
         <a class="chat-send">
-          <i class="fas fa-microphone"></i>
+          <label for="input-chat__write">
+            <i class="fas fa-microphone"></i>
+          </label>
         </a>
+
       </footer>
     </main>
 
