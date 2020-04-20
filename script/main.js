@@ -136,12 +136,13 @@ $(document).ready(function () {
     if (type == 'user') {
       messageRow.find('h3').text(messageText);
       messageRow.addClass('send-message');
+      inputMessage.val('');
     }
     // Message sent by Bot
     if (type == 'bot'){
       messageRow.addClass('received-message');
       messageRow.find('h3').text('Ok');
-      inputMessage.val('');
+      
     }
     // Append complete clone structure on project
     $('.chat-main__wrapper').append(messageRow);
