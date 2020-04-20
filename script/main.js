@@ -67,7 +67,7 @@ $(document).ready(function () {
     var textSearch = $('#input-search').val().toLowerCase();
     users.children().hide();
     
-    for (var i = 0; i < usernames.length; i++){
+    for (var i = 0; i < userList.length; i++){
       if (userList[i].includes(textSearch)){
         users.children().eq(i).show();
       }
