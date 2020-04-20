@@ -51,45 +51,71 @@ $(document).ready(function () {
   // User Search
   var inputSearch = $('#input-search');
   var users = $('.sidebar-users');
-  var userBox = $('.user-box');
+  var userList = [];
 
+  /**************************
+    1) SOLUTION WITH ARRAY
+  **************************/
+
+  // Creation of array with usernames
+  for (var i = 0; i < users.children().length; i++){
+    userList.push( users.children().eq(i).find('h3').text().toLowerCase() );
+  }
+  
+  // Search on inputbox keyup
   inputSearch.keyup(function(){
     var textSearch = $('#input-search').val().toLowerCase();
-    userBox.hide();
-
-    if ('michele'.includes(textSearch)) {
-      users.children().eq(0).show();
+    users.children().hide();
+    
+    for (var i = 0; i < usernames.length; i++){
+      if (userList[i].includes(textSearch)){
+        users.children().eq(i).show();
+      }
     }
-
-    if ('fabio'.includes(textSearch)) {
-      users.children().eq(1).show();
-    }
-
-    if ('samuele'.includes(textSearch)) {
-      users.children().eq(2).show();
-    }
-
-    if ('alessandro b.'.includes(textSearch)) {
-      users.children().eq(3).show();
-    }
-
-    if ('alessandro l.'.includes(textSearch)) {
-      users.children().eq(4).show();
-    }
-
-    if ('claudia'.includes(textSearch)) {
-      users.children().eq(5).show();
-    }
-
-    if ('davide'.includes(textSearch)) {
-      users.children().eq(6).show();
-    }
-
-    if ('federico'.includes(textSearch)) {
-      users.children().eq(7).show();
-    }
-
   })
+
+  /**************************
+    2) SOLUTION NO ARRAY
+  **************************/
+
+  // inputSearch.keyup(function(){
+  //   var textSearch = $('#input-search').val().toLowerCase();
+  //   userBox.hide();
+
+  //   if ('michele'.includes(textSearch)) {
+  //     users.children().eq(0).show();
+  //   }
+
+  //   if ('fabio'.includes(textSearch)) {
+  //     users.children().eq(1).show();
+  //   }
+
+  //   if ('samuele'.includes(textSearch)) {
+  //     users.children().eq(2).show();
+  //   }
+
+  //   if ('alessandro b.'.includes(textSearch)) {
+  //     users.children().eq(3).show();
+  //   }
+
+  //   if ('alessandro l.'.includes(textSearch)) {
+  //     users.children().eq(4).show();
+  //   }
+
+  //   if ('claudia'.includes(textSearch)) {
+  //     users.children().eq(5).show();
+  //   }
+
+  //   if ('davide'.includes(textSearch)) {
+  //     users.children().eq(6).show();
+  //   }
+
+  //   if ('federico'.includes(textSearch)) {
+  //     users.children().eq(7).show();
+  //   }
+
+  // })
+
 
  /**********************
         FUNCTIONS 
