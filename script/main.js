@@ -1,8 +1,11 @@
 
 $(document).ready(function () {
   
-var inputMessage = $('#input-chat__write');
-var messageText = inputMessage.val();
+ /**********************
+    GENERIC VARIABLES 
+  **********************/
+  var inputMessage = $('#input-chat__write');
+  var messageText = inputMessage.val();
 
   // Change Icon on input focus
   inputMessage.focus(function(){
@@ -14,7 +17,6 @@ var messageText = inputMessage.val();
     $('.chat-send i').removeClass('fa-paper-plane').addClass('fa-microphone')
   })
 
-  
   // Add message with button
   $('.app').on('click', '.chat-send', function(){
     messageText = inputMessage.val();
@@ -45,50 +47,86 @@ var messageText = inputMessage.val();
     $('.user-box').removeClass('user-active');
     $(this).addClass('user-active');
   })
-  
-  
-  // Add message Function
+
+  // User Search
+  var inputSearch = $('#input-search');
+  var users = $('.sidebar-users');
+  var userBox = $('.user-box');
+
+  inputSearch.keyup(function(){
+    var textSearch = $('#input-search').val().toLowerCase();
+    userBox.hide();
+
+    if ('michele'.includes(textSearch)) {
+      users.children().eq(0).show();
+    }
+
+    if ('fabio'.includes(textSearch)) {
+      users.children().eq(1).show();
+    }
+
+    if ('samuele'.includes(textSearch)) {
+      users.children().eq(2).show();
+    }
+
+    if ('alessandro b.'.includes(textSearch)) {
+      users.children().eq(3).show();
+    }
+
+    if ('alessandro l.'.includes(textSearch)) {
+      users.children().eq(4).show();
+    }
+
+    if ('claudia'.includes(textSearch)) {
+      users.children().eq(5).show();
+    }
+
+    if ('davide'.includes(textSearch)) {
+      users.children().eq(6).show();
+    }
+
+    if ('federico'.includes(textSearch)) {
+      users.children().eq(7).show();
+    }
+
+  })
+
+ /**********************
+        FUNCTIONS 
+  **********************/
+
+  // FUNCTION: ADD MESSAGE
   function addElement(type) {
-    // Clono struttura template
+    // Get template structure
     var messageRow = $('.template .message-row').clone();
 
-    // Calcolo orario con funzione AddZero e aggiorno il clone
+    // Fix time with a function
     var date = new Date();
     var time = addZero( date.getHours() );
     var minutes = addZero( date.getMinutes() );
     var finalTime = time + ':' + minutes;
-
     messageRow.find('h5').text(finalTime);
-
-    // Messaggio Inviato da utente
+    // Message sent by User
     if (type == 'user') {
-      // Prendo valore da inputbox
       messageRow.find('h3').text(messageText);
       messageRow.addClass('send-message');
-      
     }
-
-    // Messaggio Inviato da bot
+    // Message sent by Bot
     if (type == 'bot'){
       messageRow.addClass('received-message');
       messageRow.find('h3').text('Ok');
-      // Svuoto InputBox
       inputMessage.val('');
     }
-
-
-    // Inserisco il clone su chat reale
+    // Append complete clone structure on project
     $('.chat-main__wrapper').append(messageRow);
-    
   }
 
-    // Funzione per aggiungere 0 ad orario se min/ora < 10
-    function addZero(number){
-      if (number < 10) {
-        number = '0' + number;
-      }
-      return number;
+  // FUNCTION: ADD FIX TIME
+  function addZero(number){
+    if (number < 10) {
+      number = '0' + number;
     }
-
+    return number;
+  }
 
 });
