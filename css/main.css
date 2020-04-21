@@ -360,9 +360,27 @@ header h5{
 }
 
 .chat-emoticon{
+  position: relative;
   width: 10%;
   text-align: center;
 }
+
+.emoticon-list{
+  position: absolute;
+  display: none;
+  width: 200px;
+  top: -123px;
+  left: 5px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+  padding: 8px;
+  border-radius: 3px;
+}
+
+.emoticon-list span{
+  opacity: 1;
+  cursor: pointer;
+}
+
 .chat-write{
   width: 80%;
 }

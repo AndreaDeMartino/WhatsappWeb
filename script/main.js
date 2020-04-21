@@ -77,6 +77,22 @@ $(document).ready(function () {
     $(this).parents('.message-row').remove();
   })
 
+   // Emoticon
+
+  //  Show Menu
+   $('.emoticon-button').click(function(){
+    $('.emoticon-list').toggle();
+  })
+
+  // Add Emoticon
+  $('.emoticon-list span').click(function(){
+    var emoticon = $(this).html();
+    var text = $('#input-chat__write').val();
+    text += emoticon;
+    inputMessage.val(text);
+  })
+
+
   // Search from the inputSearch
   var users = $('.sidebar-users');
 
@@ -179,3 +195,4 @@ $(document).ready(function () {
 
 });
 /* END DOCUMENT READY */
+
