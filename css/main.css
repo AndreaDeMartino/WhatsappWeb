@@ -1,6 +1,7 @@
+/* Font Styles */
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
-/* General Rules */
 
+/* General Rules */
 body{
   height: 100vh;
   display: flex;
@@ -21,9 +22,6 @@ i{
 }
 
 /* Utility */
-
-/* Sidebar Style */
-
 .header-img{
   max-height: 50px;
   border-radius: 50%;
@@ -316,7 +314,6 @@ header h5{
 .template{
   display: none;
 }
-
 
 .chat-footer{
   height: 70px;
