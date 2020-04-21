@@ -47,6 +47,7 @@ $(document).ready(function () {
   $('.user-box').click(function(){
     var userData = $(this).attr('data-user');
     var userName = $(this).find('h3').text();
+    var lastAccess = 'Ultimo accesso oggi alle '
     
     // Refresh Sidebar
     $('.user-box').removeClass('user-active');
@@ -59,6 +60,7 @@ $(document).ready(function () {
     // Refresh Chat Header Avatar
     $('.chat-header__avatar').find('h3').text(userName);
     $('.chat-header .header-img').attr('src','img/' + userData + '.jpg').text(userName);
+    $('.chat-header h5').text('Ultimo accesso oggi alle ' + timeStamp() )
     /************************************ N.B ************************************************** 
     ( Ciao Teacher, la riga precedente è un modo alternativo per NON recuperare per intero l'attributo src dall'html, non ha molto senso pratico, ma è soltanto per fare un pò di pratica con la gestione di più elementi e per complicarsi un pò la vita di proposito)
     ************************************ N.B **************************************************/ 
@@ -119,7 +121,6 @@ $(document).ready(function () {
   //     }
   //   }
   // })
-
  /**********************
         FUNCTIONS 
   **********************/
@@ -129,13 +130,7 @@ $(document).ready(function () {
     // Get template structure
     var messageRow = $('.template .message-row').clone();
 
-    // Fix time with a addZero function
-    var date = new Date();
-    var time = addZero( date.getHours() );
-    var minutes = addZero( date.getMinutes() );
-    var finalTime = time + ':' + minutes;
-
-    messageRow.find('h5').text(finalTime);
+    messageRow.find('h5').text( timeStamp() );
 
     // Message sent by User
     if (type == 'user') {
@@ -166,6 +161,14 @@ $(document).ready(function () {
 
   }
 
+  // FUNCTION: TIME STAMP
+  function timeStamp(){
+    var date = new Date();
+    var time = addZero( date.getHours() );
+    var minutes = addZero( date.getMinutes() );
+    return finalTime = time + ':' + minutes;
+     
+  }
   // FUNCTION: ADD FIX TIME
   function addZero(number){
     if (number < 10) {
