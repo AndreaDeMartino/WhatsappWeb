@@ -43,10 +43,22 @@ $(document).ready(function () {
     }
   })
 
-  // Select the user to chat
+  // Select users Management
   $('.user-box').click(function(){
+    var userData = $(this).attr('data-user');
+    var userName = $(this).find('h3').text();
+    
+    // Refresh Sidebar
     $('.user-box').removeClass('user-active');
     $(this).addClass('user-active');
+
+    // Refresh Chat Messages
+    $('.chat-main__wrapper').removeClass('active');
+    $('.chat-main__wrapper[data-user="' + userData + '"]').addClass('active');
+
+    // Refresh Chat Header Avatar
+    $('.chat-header__avatar').find('h3').text(userName);
+    $('.chat-header .header-img').attr('src','img/' + userData + '.jpg').text(userName);
   })
 
   // Search for the user from the inputSearch
@@ -54,7 +66,7 @@ $(document).ready(function () {
 
   /**************************
     1) NO ARRAY SOLUTION
-  **************************/
+   **************************/
 
   inputSearch.keyup(function(){
     var textSearch = $('#input-search').val().toLowerCase().trim();
@@ -72,7 +84,7 @@ $(document).ready(function () {
 
   /**************************
     2) SOLUTION WITH ARRAY
-  **************************/
+   **************************/
 
   //  var users = $('.sidebar-users');
   //  var userList = [];
@@ -124,7 +136,7 @@ $(document).ready(function () {
     }
 
     // Upload of the final version of the clone to the project
-    $('.chat-main__wrapper').append(messageRow);
+    $('.chat-main__wrapper.active').append(messageRow);
 
     // Scroll on inserting a new message:
     // 1) Get the height of the message chat container

@@ -57,9 +57,9 @@
 
         <div class="sidebar-users">
 
-          <div class="user-box user-active">
+          <div class="user-box user-active" data-user="michele">
             <div class="user-box__info">
-              <img src="img/avatar_1.jpg" alt="avatar1" class="avatar main-img">
+              <img src="img/michele.jpg" alt="avatar1" class="avatar main-img">
               <div class="avatar-info">
                 <h3>Michele</h3>
                 <h5>Non poteva essere altrimenti</h5>
@@ -71,9 +71,9 @@
             </div>
           </div>
 
-          <div class="user-box">
+          <div class="user-box" data-user="fabio">
             <div class="user-box__info">
-              <img src="img/avatar_2.jpg" alt="avatar1" class="avatar main-img">
+              <img src="img/fabio.jpg" alt="avatar1" class="avatar main-img">
               <div class="avatar-info">
                 <h3>Fabio</h3>
                 <h5>Non poteva essere altrimenti</h5>
@@ -85,9 +85,9 @@
             </div>
           </div>
 
-          <div class="user-box" >
+          <div class="user-box" data-user="samuele">
             <div class="user-box__info">
-              <img src="img/avatar_3.jpg" alt="avatar1" class="avatar main-img">
+              <img src="img/samuele.jpg" alt="avatar1" class="avatar main-img">
               <div class="avatar-info">
                 <h3>Samuele</h3>
                 <h5>Non poteva essere altrimenti</h5>
@@ -99,9 +99,9 @@
             </div>  
           </div>
 
-          <div class="user-box">
+          <div class="user-box" data-user="alessandro-b">
             <div class="user-box__info">
-              <img src="img/avatar_4.jpg" alt="avatar1" class="avatar main-img">
+              <img src="img/alessandro-b.jpg" alt="avatar1" class="avatar main-img">
               <div class="avatar-info">
                 <h3>Alessandro B.</h3>
                 <h5>Non poteva essere altrimenti</h5>
@@ -113,9 +113,9 @@
             </div>
           </div>
 
-          <div class="user-box">
+          <div class="user-box" data-user="alessandro-l">
             <div class="user-box__info">
-              <img src="img/avatar_5.jpg" alt="avatar1" class="avatar main-img">
+              <img src="img/alessandro-l.jpg" alt="avatar1" class="avatar main-img">
               <div class="avatar-info">
                 <h3>Alessandro L.</h3>
                 <h5>Non poteva essere altrimenti</h5>
@@ -127,9 +127,9 @@
             </div>
           </div>
 
-          <div class="user-box">
+          <div class="user-box" data-user="claudia">
             <div class="user-box__info">
-              <img src="img/avatar_6.jpg" alt="avatar1" class="avatar main-img">
+              <img src="img/claudia.jpg" alt="avatar1" class="avatar main-img">
               <div class="avatar-info">
                 <h3>Claudia</h3>
                 <h5>Non poteva essere altrimenti</h5>
@@ -141,9 +141,9 @@
             </div>
           </div>
 
-          <div class="user-box">
+          <div class="user-box" data-user="davide">
             <div class="user-box__info">
-              <img src="img/avatar_7.jpg" alt="avatar1" class="avatar main-img">
+              <img src="img/davide.jpg" alt="avatar1" class="avatar main-img">
               <div class="avatar-info">
                 <h3>Davide</h3>
                 <h5>Non poteva essere altrimenti</h5>
@@ -155,9 +155,9 @@
             </div>
           </div>
 
-          <div class="user-box">
+          <div class="user-box" data-user="federico">
             <div class="user-box__info">
-              <img src="img/avatar_8.jpg" alt="avatar1" class="avatar main-img">
+              <img src="img/federico.jpg" alt="avatar1" class="avatar main-img">
               <div class="avatar-info">
                 <h3>Federico</h3>
                 <h5>Non poteva essere altrimenti</h5>
@@ -179,7 +179,7 @@
       <header class="chat-header"> 
 
         <div class="chat-header__avatar">
-          <img src="img/avatar_1.jpg" alt="avatar1" class="avatar header-img">
+          <img src="img/michele.jpg" alt="avatar1" class="avatar header-img">
           <div class="avatar-info">
             <h3>Michele</h3>
             <h5>Ultimo accesso oggi alle 15.40</h5>
@@ -196,7 +196,9 @@
       
       <!-- Chat: Main -->
       <main class="chat-main">
-        <div class="chat-main__wrapper">
+
+        <!-- User: Michele -->
+        <div class="chat-main__wrapper active" data-user="michele">
 
           <div class="message-row send-message">
             <div class="message">
@@ -212,17 +214,262 @@
             </div>
           </div>
 
-          <!-- Template -->
-          <div class="template">
-            <div class="message-row">
-              <div class="message">
-                <h3></h3>
-                <h5 class="message-time">06:20</h5>
-              </div>
+        </div>
+
+        <!-- User: Fabio -->
+        <div class="chat-main__wrapper" data-user="fabio">
+
+          <div class="message-row send-message">
+            <div class="message">
+              <h3>Ciao come ti chiami?</h3>
+              <h5 class="message-time">06:20</h5>
+            </div>
+          </div>
+          
+          <div class="message-row received-message">
+            <div class="message">
+              <h3>Sono Fabio.</h3>
+              <h5 class="message-time">06:20</h5>
+            </div>
+          </div>
+
+          <div class="message-row send-message">
+            <div class="message">
+              <h3>Mi correggi tu l'esercizio?</h3>
+              <h5 class="message-time">06:20</h5>
+            </div>
+          </div>
+          
+          <div class="message-row received-message">
+            <div class="message">
+              <h3>Ma che sei pazzo...</h3>
+              <h5 class="message-time">06:20</h5>
+            </div>
+          </div>
+
+        </div>        
+
+        <!-- User: Samuele -->
+        <div class="chat-main__wrapper" data-user="samuele">
+
+          <div class="message-row send-message">
+            <div class="message">
+              <h3>Come ti chiami?</h3>
+              <h5 class="message-time">06:20</h5>
+            </div>
+          </div>
+          
+          <div class="message-row received-message">
+            <div class="message">
+              <h3>Sono Samuele.</h3>
+              <h5 class="message-time">06:20</h5>
+            </div>
+          </div>
+
+          <div class="message-row send-message">
+            <div class="message">
+              <h3>Se ti apro un ticket mi rispondi?</h3>
+              <h5 class="message-time">06:20</h5>
             </div>
           </div>
 
         </div>
+
+        <!-- User: Alessandro B. -->
+        <div class="chat-main__wrapper" data-user="alessandro-b">
+
+          <div class="message-row send-message">
+            <div class="message">
+              <h3>Come ti chiami?</h3>
+              <h5 class="message-time">06:20</h5>
+            </div>
+          </div>
+          
+          <div class="message-row received-message">
+            <div class="message">
+              <h3>Sono Alessandro B.</h3>
+              <h5 class="message-time">06:20</h5>
+            </div>
+          </div>
+          
+          <div class="message-row received-message">
+            <div class="message">
+              <h3>Non ti fidare dell'altro Alessandro.</h3>
+              <h5 class="message-time">06:20</h5>
+            </div>
+          </div>
+
+          <div class="message-row send-message">
+            <div class="message">
+              <h3>Perchè mai?</h3>
+              <h5 class="message-time">06:20</h5>
+            </div>
+          </div>
+
+          <div class="message-row received-message">
+            <div class="message">
+              <h3>C'è posto solo per uno di noi in questa chat.</h3>
+              <h5 class="message-time">06:20</h5>
+            </div>
+          </div>
+        </div>
+
+        <!-- User: Alessandro L. -->
+        <div class="chat-main__wrapper" data-user="alessandro-l">
+
+          <div class="message-row send-message">
+            <div class="message">
+              <h3>Come ti chiami?</h3>
+              <h5 class="message-time">06:20</h5>
+            </div>
+          </div>
+          
+          <div class="message-row received-message">
+            <div class="message">
+              <h3>Sono Alessandro L.</h3>
+              <h5 class="message-time">06:20</h5>
+            </div>
+          </div>
+
+          <div class="message-row received-message">
+            <div class="message">
+              <h3>Hai avuto a che fare con l'altro Alessandro per caso?</h3>
+              <h5 class="message-time">06:20</h5>
+            </div>
+          </div>
+
+          <div class="message-row send-message">
+            <div class="message">
+              <h3>Si perchè?</h3>
+              <h5 class="message-time">06:20</h5>
+            </div>
+          </div>
+
+          <div class="message-row received-message">
+            <div class="message">
+              <h3>Bloccalo subito!</h3>
+              <h5 class="message-time">06:20</h5>
+            </div>
+          </div>
+        </div>
+
+        <!-- User: Claudia -->
+        <div class="chat-main__wrapper" data-user="claudia">
+          
+          <div class="message-row received-message">
+            <div class="message">
+              <h3>Sono Claudia, che ne pensi delle dev donne?</h3>
+              <h5 class="message-time">06:20</h5>
+            </div>
+          </div>
+
+          <div class="message-row send-message">
+            <div class="message">
+              <h3>Siete brave anche voi</h3>
+              <h5 class="message-time">06:20</h5>
+            </div>
+          </div>
+
+          <div class="message-row received-message">
+            <div class="message">
+              <h3>ANCHE?</h3>
+              <h5 class="message-time">06:20</h5>
+            </div>
+          </div>
+
+          <div class="message-row send-message">
+            <div class="message">
+              <h3>Possibile che con voi deve essere complicata pure qua?</h3>
+              <h5 class="message-time">06:20</h5>
+            </div>
+          </div>
+      
+        </div>
+
+        <!-- User: Davide -->
+        <div class="chat-main__wrapper" data-user="davide">
+
+          <div class="message-row send-message">
+            <div class="message">
+              <h3>Come ti chiami?</h3>
+              <h5 class="message-time">06:20</h5>
+            </div>
+          </div>
+          
+          <div class="message-row received-message">
+            <div class="message">
+              <h3>Sono Davide.</h3>
+              <h5 class="message-time">06:20</h5>
+            </div>
+          </div>
+
+          <div class="message-row received-message">
+            <div class="message">
+              <h3>Io sono un HTML vuoi essere il mio CSS?</h3>
+              <h5 class="message-time">06:20</h5>
+            </div>
+          </div>
+
+          <div class="message-row send-message">
+            <div class="message">
+              <h3>Ma che mi hai preso per una libreria?</h3>
+              <h5 class="message-time">06:20</h5>
+            </div>
+          </div>
+
+          <div class="message-row send-message">
+            <div class="message">
+              <h3>E cmq sono etero..</h3>
+              <h5 class="message-time">06:20</h5>
+            </div>
+          </div>
+
+        </div>        
+        
+        <!-- User: Federico -->
+        <div class="chat-main__wrapper" data-user="federico">
+
+          <div class="message-row send-message">
+            <div class="message">
+              <h3>Come ti chiami?</h3>
+              <h5 class="message-time">06:20</h5>
+            </div>
+          </div>
+          
+          <div class="message-row received-message">
+            <div class="message">
+              <h3>Sono Federico.</h3>
+              <h5 class="message-time">06:20</h5>
+            </div>
+          </div>
+
+
+          <div class="message-row send-message">
+            <div class="message">
+              <h3>Fanno tutti i simpatici in questa chat?</h3>
+              <h5 class="message-time">06:20</h5>
+            </div>
+          </div>
+
+
+          <div class="message-row send-message">
+            <div class="message">
+              <h3>Perfetto, non mi rispondi nemmeno...</h3>
+              <h5 class="message-time">06:20</h5>
+            </div>
+          </div>
+        </div>
+
+        <!-- Template -->
+        <div class="template">
+          <div class="message-row">
+            <div class="message">
+              <h3></h3>
+              <h5 class="message-time">06:20</h5>
+            </div>
+          </div>
+        </div>
+
       </main>
 
       <!-- Chat: footer -->

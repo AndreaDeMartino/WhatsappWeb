@@ -92,10 +92,6 @@ header h5{
   transition: filter 0.3s;
 }
 
-.user-box:hover{
-  filter: grayscale(0);
-}
-
 .sidebar-notify{
   height: 75px;
   background: #9fd8f9;
@@ -257,9 +253,12 @@ header h5{
 }
 
 .chat-main__wrapper{
+  display: none;
   width: 90%;
   margin: 0 auto;
-
+}
+.chat-main__wrapper.active{
+  display: block;
 }
 
 .message-row{
