@@ -59,6 +59,18 @@ $(document).ready(function () {
     // Refresh Chat Header Avatar
     $('.chat-header__avatar').find('h3').text(userName);
     $('.chat-header .header-img').attr('src','img/' + userData + '.jpg').text(userName);
+    /************************************ N.B ************************************************** 
+    ( Ciao Teacher, la riga precedente è un modo alternativo per NON recuperare per intero l'attributo src dall'html, non ha molto senso pratico, ma è soltanto per fare un pò di pratica con la gestione di più elementi e per complicarsi un pò la vita di proposito)
+    ************************************ N.B **************************************************/ 
+  })
+
+  // Menu on chat message
+  $('.message-menu').click(function(){
+    $(this).next('.message-menu-box').toggle();
+  });
+  
+  $('.message-menu-box').find('.delete-message').click(function (){
+    $(this).parents('.message-row').remove();
   })
 
   // Search for the user from the inputSearch

@@ -21,6 +21,16 @@ i{
   cursor: pointer;
 }
 
+a{
+  text-decoration: none;
+  color: black;
+  opacity: 0.5;
+}
+
+a:hover{
+  opacity: 1;
+}
+
 /* Utility */
 .header-img{
   max-height: 50px;
@@ -265,6 +275,7 @@ header h5{
   min-height: 50px;
   margin: 15px 0;
   display: flex;
+  justify-content: space-between;
 }
 
 .send-message{
@@ -308,6 +319,27 @@ header h5{
   bottom: 8%;
   left: 78%;
   color: #b7b9bb;
+}
+
+.message-menu{
+  position: absolute;
+  bottom: 40%;
+  left: 78%;
+  color: #7d7f83;
+  font-size: 14px;
+}
+
+.message-menu-box{
+  display: none;
+  position: absolute;
+  top: 60%;
+  left: 70%;
+  background: white;
+  padding: 10px;
+  z-index: 10;
+  font-size: 12px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 .template{
