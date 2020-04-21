@@ -64,16 +64,18 @@ $(document).ready(function () {
     ************************************ N.B **************************************************/ 
   })
 
-  // Menu on chat message
-  $('.message-menu').click(function(){
-    $(this).next('.message-menu-box').toggle();
-  });
+  // Interactions on messages
   
-  $('.message-menu-box').find('.delete-message').click(function (){
+  // Show Menu
+  $('.app').on('click', '.message-menu', function(){
+    $(this).next('.message-menu-box').toggle();
+  })
+  // Delete Message
+  $('.app').on('click', '.delete-message', function(){
     $(this).parents('.message-row').remove();
   })
 
-  // Search for the user from the inputSearch
+  // Search from the inputSearch
   var users = $('.sidebar-users');
 
   /**************************
