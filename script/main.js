@@ -80,7 +80,9 @@ $(document).ready(function () {
    // Emoticon
 
   //  Show Menu
-   $('.emoticon-button').click(function(){
+  var emoticonButton = $('.emoticon-button')
+
+  emoticonButton.click(function(){
     $('.emoticon-list').toggle();
   })
 
@@ -92,6 +94,18 @@ $(document).ready(function () {
     inputMessage.val(text);
   })
 
+  // Detect external click on emoticon and message menu
+  $('.app').click(function(e){
+    if(!emoticonButton.is(e.target) && emoticonButton.has(e.target).length === 0)
+    {
+      $('.emoticon-list').hide();
+    }
+    
+    if(!$('.message-menu').is(e.target) && $('.message-menu').has(e.target).length === 0)
+    {
+      $('.message-menu-box').hide();
+    }
+  })
 
   // Search from the inputSearch
   var users = $('.sidebar-users');
