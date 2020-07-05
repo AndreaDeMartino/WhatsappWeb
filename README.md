@@ -25,7 +25,7 @@ Whatsapp Web | Replica
 
 ### :desktop_computer: Project Preview:
 
-![](img/screen.png)
+![](img/Screen.png)
 
 > Visit My Github Profile to see other __Projects__:man_technologist:
 
